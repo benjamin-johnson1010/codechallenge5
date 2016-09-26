@@ -1,5 +1,6 @@
 //create function to send new hero information to the server
-myApp.controller('newHeroController', ['$scope', '$http', function($scope, $http){
+myApp.controller('addHeroController', ['$scope', '$http', function($scope, $http){
+  console.log('addHeroController');
   $scope.newHero = function(){
     console.log('in newHero');
     //create object to pass to server of hero info
@@ -24,10 +25,10 @@ myApp.controller('newHeroController', ['$scope', '$http', function($scope, $http
     }).then(function(response){
       console.log('this is from the server', response);
 //display the new hero on DOM
-$scope.displayAlias = response.data.alias;
-$scope.displayName = response.data.first_name + ' ' + respone.data.last_name;
-$scope.displayCity = respone.data.city;
-$scope.displayPower = response.data.power_name;
+$scope.displayAlias = 'Alias: ' + response.data.alias;
+$scope.displayName = 'Name: ' + response.data.first_name + ' ' + response.data.last_name;
+$scope.displayCity = 'Location: ' + response.data.city;
+$scope.displayPower = 'Power: ' + response.data.power_name;
     });
   };
 }]);

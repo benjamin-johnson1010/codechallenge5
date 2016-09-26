@@ -1,0 +1,7 @@
+<div ng-controller="displayHeroesController">
+  <!--show displayHeroes on load-->
+<div ng-init="displayHeroes()" placeholder=""></div>
+
+<h3 ng-repeat="hero in allHeroes">Alias: {{hero.alias}} Name: {{hero.first_name}} {{hero.last_name}} Locations: {{hero.city}} Power: {{hero.power}}</h3>
+
+</div>

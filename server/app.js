@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/HeroTable");
 app.listen(port, function(){
   console.log('listening on', port);
 });
-app.get("/", function(req,res){
+app.get("/*", function(req,res){
     var file = req.params[0] || "/views/index.html";
     res.sendFile(path.join(__dirname, "/public/", file));
 });

@@ -1,7 +1,7 @@
 myApp.controller('displayHeroesController', ["$scope", '$http', function($scope, $http){
 console.log('in displayHeroesController');
 //get the pets to display on DOM
-    $scope.displayPet = function(){
+    $scope.displayHeroes = function(){
     console.log('in displayHero');
       //call to get the pets in the database
      $http({
