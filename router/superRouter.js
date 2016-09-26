@@ -4,7 +4,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 //model
-var User = require('../models/heroes.js');
+var User = require('../models/hero.js');
 //get the objects from the databse to send back
 router.get('/',function(req, res){
   console.log('in router.get');
